@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    tools:context=".PreferencesActivity">
+
+    <TextView
+        android:id="@+id/set_preferences"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="10dp"
+        android:text="Set preferences"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/choose_difficulty_level"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Choose your level of difficulty:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/question_level_all"
+        android:layout_width="match_parent"
+        android:layout_height="123dp">
+
+        <RadioButton
+            android:id="@+id/question_level_easy"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="questionLevelClicked"
+            android:text="easy" />
+
+        <RadioButton
+            android:id="@+id/question_level_medium"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="questionLevelClicked"
+            android:text="medium" />
+
+        <RadioButton
+            android:id="@+id/question_level_hard"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="questionLevelClicked"
+            android:text="hard" />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/choose_amount_of_questions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:text="Choose your amount of questions: \n (The maximum is 20 questions)"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <EditText
+            android:id="@+id/amount_of_questions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="1 - 20" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/start_game_button"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/black"
+        android:onClick="startGameButtonClicked"
+        android:text="Start Game!"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
